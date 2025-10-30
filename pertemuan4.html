@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 4 : HTML Form</title>
+</head>
+<body>
+    <h2>Materi : HTML Form</h2>
+    <ol>
+        <li>Form adalah wadah untuk seluruh element input</li>
+        <li>Action : Tujuan pengiriman data</li>
+        <li>Method : Cara pengiriman (Get atau post)</li>
+    </ol>
+    <form action="home.html" method="">
+        <label for="username">Nama</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="tanggal">Tanggal Lahir</label>
+        <input type="date" id="tanggal" name="tanggal"><br><br>
+
+        <label for="jam">Jam Kuliah</label>
+        <input type="time" id="jam" name="jam"><br><br>
+
+        <label for="sks">Jumlah SKS</label>
+        <input type="number" id="sks" name="sks"><br><br>
+
+        <label for="warna">Warna Favorit</label>
+        <input type="color" id="warna" name="warna"><br><br>
+
+        <label for="range">Capaian kuliah</label>
+        <input type="range" min="0" max="100"><br><br>
+
+        <label for="prodi">Pilih Prodi</label>
+        <select name="prodi" id="prodi">
+            <option value="SI">Sistem Informasi</option>
+            <option value="TI">Teknik Informatika</option>
+            <option value="DKV">Desain Komunikasi Visual</option>
+        </select><br><br>
+
+        <label for="gender">Gender</label>
+        <input type="radio" id="laki" name="gender"><label for="laki">Laki-Laki</label>
+        <input type="radio" id="perempuan" name="gender"><label for="perempuan">Perempuan</label>
+        <br><br>
+
+        <label for="hobi">Hobi</label>
+        <input type="checkbox" id="olahraga" name="hobi[]" value="Olahraga"><label for="olahraga">Olahraga</label>
+        <input type="checkbox" id="membaca" name="hobi[]" value="Membaca"><label for="membaca">Membaca</label>
+        <input type="checkbox" id="travelling" name="hobi[]" value="Travelling"><label for="travelling">Travelling</label> 
+        <br><br>
+
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat" id="alamat" rows="5" cols="50"></textarea><br><br>
+
+        <label for="foto">Upload Foto</label>
+        <input type="file" id="foto" name="foto" multiple accept=".jpg,.jpeg,.png"><br><br>
+
+        <button type="button" onclick="alert('Hallo Semua!!')">Click Notifikasi</button>
+        <button type="submit">Submit / Save</button>
+        <button type="reset">Reset</button>
+<br><br>
+    </form>
+</body>
+</html>

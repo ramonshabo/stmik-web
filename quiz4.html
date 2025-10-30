@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 4</title>
+</head>
+<body>
+    <h2>QUIZ : HTML Form</h2>
+<form action="home.html" method="">
+    <table>
+        <tr>
+            <td><label for="nama">Nama</label></td>
+            <td><input type="text"  id="nama" name="nama"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password"  id="password" name="password"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <td><label for="tanggal">Tanggal Lahir</label></td>
+            <td><input type="date"><br><br></td>
+        </tr>
+        <tr>
+            <td><label for="time">Jam Kuliah</label></td>
+            <td><input type="time"></td>
+        </tr>
+        <tr>
+            <td><label for="sks">Jumlah SKS</label></td>
+            <td><input type="number" min="0"></td>
+        </tr>
+        <tr>
+            <td><label for="warna">Warna Favorit</label></td>
+            <td><input type="color"></td>
+        </tr>
+        <tr>
+            <td><label for="range">Capaian Perkuliahan</label></td>
+            <td><input type="range" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td><label for="prodi">Pilih Prodi</label></td>
+            <td><select name="prodi" id="prodi" name="prodi">
+                    <option value="SI">Sistem Informasi</option>
+                    <option value="TI">Teknik Informatika</option>
+                    <option value="dkv">Desain Komunikasi Visual</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender</label></td>
+            <td><input type="radio" id="laki" name="gender" checked><label for="laki">Laki</label>
+                <input type="radio" id="perempuan" name="gender"><label for="perempuan">Perempuan</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="hobi">Hobi</label></td>
+            <td><input type="checkbox" name="hobi[]"id="olahraga" value="Olahraga"><label for="olahraga">Olahraga</label>
+                <input type="checkbox" name="hobi[]"id="Membaca" value="Membaca"><label for="Membaca">Membaca</label>
+                <input type="checkbox" name="hobi[]"id="Travelling" value="Travelling"><label for="Travelling">Travelling</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="alamat">Alamat</label></td>
+            <td><textarea name="alamat" id="alamat" name="alamat" cols="50" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="foto">Upload Foto</label></td>
+            <td><input type="file" name="foto" multiple accept=".jpg,.jpeg,.png"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="alert('Hallo Semua!')" value="Click Notifikasi">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+            </td>
+        </tr>
+        </table>
+    </form>
+</body>
+</html>
