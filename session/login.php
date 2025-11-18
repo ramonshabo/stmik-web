@@ -66,9 +66,9 @@
         <h2>Form Login</h2>
         <form action="proses_login.php" method="POST">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username"><br>
+            <input type="text" name="username" id="username" required><br>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password"><br>
+            <input type="password" name="password" id="password" required><br>
             <button type="submit">LOGIN</button>
         </form>
     </div>

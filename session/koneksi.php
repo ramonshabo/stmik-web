@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$user = "root";       // sesuaikan dengan user MySQL kamu
+$user = "root";       // sesuaikan dengan user MySQL kalian
 $pass = "";           // isi password MySQL kalau ada
 $db   = "db_stmikweb";
 
