@@ -19,6 +19,7 @@ $row = mysqli_fetch_assoc($query);
     <div class="container mt-4 col-md-6">
       <h2>Form Edit Barang</h2>
         <form class="mt-3" action="update.php" method="POST">
+            <input type="hidden" name="id" value="<?= $row['id']; ?>">
           <div class="mb-3">
             <label for="nama" class="form-label">Nama Barang</label>
             <input type="text" class="form-control" id="nama" name="nama" value="<?= $row['nama_barang'] ?>" required>
