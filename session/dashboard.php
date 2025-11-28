@@ -1,5 +1,9 @@
 <?php
 session_start();
+<<<<<<< HEAD
+=======
+
+>>>>>>> e4a704a1ae68c4ca394e2c7382386f1076737ff9
 // cek apakah sudah login
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
@@ -7,7 +11,12 @@ if (!isset($_SESSION['username'])) {
 }
 
 include "koneksi.php";
+<<<<<<< HEAD
 $query = "SELECT * FROM barang ORDER BY id DESC";
+=======
+
+$query = "SELECT * FROM barang";
+>>>>>>> e4a704a1ae68c4ca394e2c7382386f1076737ff9
 $result = mysqli_query($conn, $query);
 ?>
 
@@ -15,6 +24,7 @@ $result = mysqli_query($conn, $query);
 <html>
 <head>
     <title>Dashboard</title>
+<<<<<<< HEAD
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
         nav {
@@ -58,5 +68,33 @@ $result = mysqli_query($conn, $query);
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+=======
+</head>
+<body>
+    <h2>Selamat datang, <b style="color:blue"><?php echo $_SESSION['username']; ?>!</b></h2>
+    <p>Anda berhasil login.</p>
+    <a href="logout.php">Logout</a>
+
+    <h2>Daftar Barang</h2>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Stok</th>
+        </tr>
+        <?php
+        $no = 1;
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . $no++ . "</td>";
+            echo "<td>" . htmlspecialchars($row['nama_barang']) . "</td>";
+            echo "<td>Rp " . number_format($row['harga'], 0, ',', '.') . "</td>";
+            echo "<td>" . $row['stok'] . "</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+>>>>>>> e4a704a1ae68c4ca394e2c7382386f1076737ff9
 </body>
 </html>
